@@ -77,7 +77,7 @@ def main():
         video_name = args.video_name.split('/')[-1].split('.')[0]
     else:
         video_name = 'webcam'
-    cv2.namedWindow(video_name, cv2.WND_PROP_FULLSCREEN)
+    # cv2.namedWindow(video_name, cv2.WND_PROP_FULLSCREEN)
     for frame in get_frames(args.video_name):
         if first_frame:
             try:
@@ -102,7 +102,7 @@ def main():
                               (bbox[0]+bbox[2], bbox[1]+bbox[3]),
                               (0, 255, 0), 3)
             # cv2.imshow(video_name, frame)
-            print("it's working")
+            print("it's working", bbox)
             cv2.waitKey(40)
 
 
